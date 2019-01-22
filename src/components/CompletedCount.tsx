@@ -8,7 +8,14 @@ const CompletedCount: React.FunctionComponent<CompletedCountProps> = ({
   completedCount,
 }) => {
   return (
-    <>{completedCount > 0 && `You've completed ${completedCount} todos!`}</>
+    <>
+      <p style={{ textAlign: 'center' }}>
+        {completedCount > 0 &&
+          `You've completed ${completedCount} task${
+            completedCount > 1 ? 's' : ''
+          }!`}
+      </p>
+    </>
   );
 };
 

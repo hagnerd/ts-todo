@@ -74,7 +74,7 @@ class App extends React.Component<{}, AppState> {
   render() {
     const todosLeft = this.state.todos.filter(todo => todo.completed === false)
       .length;
-    const todosCompleted = todosLeft - this.state.todos.length;
+    const todosCompleted = this.state.todos.length - todosLeft;
     const todos = todoViewReducer(this.state.selectedView, this.state.todos);
 
     return (

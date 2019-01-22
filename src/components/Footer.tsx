@@ -12,9 +12,9 @@ const Footer: React.FunctionComponent<FooterProps> = ({
   completedCount,
 }) => {
   return (
-    <footer>
-      <CompletedCount completedCount={completedCount} />
+    <footer style={{ height: '50px' }}>
       <UncompletedCount uncompletedCount={uncompletedCount} />
+      <CompletedCount completedCount={completedCount} />
     </footer>
   );
 };
